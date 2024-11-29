@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="pane" id="left-pane">
+    <h2>Questions</h2>
+    <ul class="question-list" id="question-list"></ul>
+  </div>
+
+  <div class="pane" id="right-pane">
+    <h2>Ask a Question</h2>
+    <form id="question-form">
+      <label for="title">Title:</label><br>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="question">Question:</label><br>
+      <textarea id="question" name="question" required></textarea><br><br>
+      <button type="submit">Submit Question</button>
+    </form>
+
+    <div id="question-detail" class="question-detail">
+      <h3 id="question-title"></h3>
+      <p id="question-text"></p>
+      <h4>Responses:</h4>
+      <ul id="responses-list"></ul>
+      <div class="response-form">
+        <h4>Submit a Response</h4>
+        <form id="response-form">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br>
+          <label for="comment">Comment:</label><br>
+          <textarea id="comment" name="comment" required></textarea><br><br>
+          <button type="submit">Submit Response</button>
+        </form>
+      </div>
+      <button id="resolve-btn" class="resolve-btn">Resolve</button>
+    </div>
+
+    <div id="previous-answers" class="previous-answers"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
